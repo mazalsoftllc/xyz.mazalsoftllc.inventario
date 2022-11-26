@@ -1,35 +1,40 @@
-
 # Mazalsoft Inventario
+## _Sistema que permite realizar una gestión de las existencias de un almacén, tanto en la entrada como en el almacenamiento o la salida._
 
+[![N|Solid](https://i.ibb.co/Bnm7LQP/logo-leeme-mazalsoft-inventario.png)](https://mazalsoft.xyz/inventario/)
 
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://mazalsoft.xyz/inventario/estado)
 
-"El software especializado para realizar inventarios es en realidad un conjunto de herramientas elaboradas para la supervisión de componentes establecidas en una red, bien sea pública o privada (corporativa, administrativa, social, entre otros), que facilita el seguimiento de la configuración y el software instalado en los ordenadores de una red local, así como la instalación remota de aplicaciones desde un servidor Web. Este permite a los usuarios administrar el inventario de sus activos, por medio de un despliegue de paquetes en computadores como por ejemplo Windows y Linux." - Wikipedia.
+Mazalsoft Inventario es una aplicación web habilitada para la nube, preparada para dispositivos móviles y compatible con todos los navegadores estándar.
+La tecnología base es PHP y se apoya en librerías del lado del cliente para la interfaz gráfica de usuario en especial Bootstrap y jQuery.
 
-Mazalsoft inventario es una aplicación que se utiliza para llevar inventarios y recopilar información sobre productos que se van a comercializar y que se compran a un proveedor. Personalizado como un software libre, este tipo de programa no solamente es usado como una herramienta que diagnostica la parte de inventario, sino también, se utiliza a nivel empresarial para la gestion de venta de los productos que ingresan y egresan de bodega.
+Arquitectura de planta (cliente/planta/).
+- Esto es el diseño del encabezado (encabezado.php)
+- Esto es el diseño del pie de página (pie_pagina.php)
+- Esto es el diseño del menú administrador (menu_admin.php)
+- Esto es el diseño del menú usuario (menu_usuario.php)
+- Esto es el diseño del menú especial (menu_especial.php)
 
-Mazalsoft puede utilizarse para visualizar el inventario a través de una interfaz web. Además, Mazalsoft inventario comprende la posibilidad de implementación de reportes en los equipos de acuerdo a criterios de búsqueda (Bases de datos establecidas en las mismas computadoras o Bases de datos en línea), siendo este sistema categorizado como una utilidad empresarial. Se basa en los estándares actuales. El diálogo entre los equipos cliente y los servidores, se basa en el Protocolo de transferencia de hipertexto (HTTP) y el formato de los datos es JSON.
+## Tecnología
 
-Se proyecta construir los siguientes módulos:
+Mazalsoft Inventario utiliza una serie de proyectos de código abierto para funcionar correctamente:
+- [PHP](https://www.php.net/) - V. 7.4.33 , 8.0.25 , 8.1.12
+- [MariaDB](https://www.php.net/) - V. 5.4.27
+- [OpenSSL](https://www.openssl.org/) - V. 1.1.1p 
+- [HTML](https://developer.mozilla.org/es/docs/Web/HTML) - V. 5 
+- [Bootstrap](https://getbootstrap.com/) - V. 5.2
+- [jQuery](https://jquery.com/) - V. 3.6.1
+- [Javascript](https://www.javascript.com) - V. Última versión para el 25-11-2022
+- [CSS](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics) - V. Última versión para el 25-11-2022
 
-El servidor de administración utiliza PHP, MySQL y Bootstrap . Se proyecta construir una interfaz web privativa escrita en PHP que ofrecerá servicios los siguientes servicios:
+Mazalsoft Inventario es de código abierto.
 
-* Tablero principal.
-* Gestión de usuarios.
-* Gestión de categorías.
-* Gestión de productos.
-* Gestión multimedia.
-* Gestión de ventas.
-* Reporte de ventas.
+## Development
+- [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
+- [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
 
-_____________________
+## License
 
+MIT
 
-
-Personalizado por: Edgar Mauricio Chara Hurtado
-Cámara de comercio: CAUCA, Colombia.
-NIT 1061740164-7
-
-6201 Actividades de desarrollo de sistemas informáticos (planificación, análisis, diseño, programación, pruebas).
-5820 Edición de programas de informática (software).
-7310 Publicidad.
-5911 Actividades de producción de películas cinematográficas, videos, programas, anuncios y comerciales de televisión.
+**Software libre, ¡claro que sí!**
