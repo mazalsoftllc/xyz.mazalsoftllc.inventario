@@ -8,12 +8,60 @@
 Mazalsoft Inventario es una aplicación web habilitada para la nube, preparada para dispositivos móviles y compatible con todos los navegadores estándar.
 La tecnología base es PHP y se apoya en librerías del lado del cliente para la interfaz gráfica de usuario en especial Bootstrap y jQuery.
 
-Arquitectura de planta (cliente/planta/).
+## Curso
+##### Aprende a personalizar este proyecto de software libre en UDEMY
+- [Crea un software para gestión de inventarios en PHP & MYSQL](https://www.udemy.com/course/mazalsoft-inventario-php-mysql/?referralCode=0EC56E3F9FC6DF4CB6E9) - Enlace directo.
+
+## Arquitectura
+
+##### Planta
+Arquitectura cliente (cliente/planta/):
+
 - Esto es el diseño del encabezado (encabezado.php)
 - Esto es el diseño del pie de página (pie_pagina.php)
 - Esto es el diseño del menú administrador (menu_admin.php)
 - Esto es el diseño del menú usuario (menu_usuario.php)
 - Esto es el diseño del menú especial (menu_especial.php)
+_____________________
+##### Controladores
+Arquitectura servidor (servidor/procesador/controladores/):
+
+
+- Esto es el cargador (cargador.php)
+- Esto es el controlador configuración (configuracion.php)
+- Esto es el controlador funciones (funciones.php)
+- Esto es el controlador multimedia (multimedia.php)
+- Esto es el controlador sesion (sesion.php)
+- Esto es el controlador sql (sql.php)
+
+##### Autenticación
+Arquitectura servidor (servidor/procesador/autenticacion/):
+
+- Esto es el módulo autorizacion (autorizacion.php)
+
+##### API
+Arquitectura servidor (servidor/procesador/api/):
+###### Leer colección
+Arquitectura servidor (servidor/procesador/api/leer_coleccion):
+
+- Esto es el punto final tablero (tablero.php)
+
+_____________________
+##### Glamur
+Arquitectura herramientas (herramientas/glamur/):
+
+###### CSS
+Arquitectura herramientas (herramientas/glamur/css/):
+
+- Esto es la hoja de estilo (estilo.css)
+_____________________
+##### Base de datos
+Arquitectura base de datos (basede-de-datos/):
+
+###### Importación
+Arquitectura de la base de datos (base-de-datos/importacion/):
+- Esto es el script de importación (script_importacion.sql)
+_____________________
 
 ## Tecnología
 
@@ -32,6 +80,8 @@ Mazalsoft Inventario es de código abierto.
 ## Development
 - [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
 - [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
+- [Whatsapp](https://wa.link/125i7q) - +57 3153774638
+- [Sitio web](https://www.mazalsoft.xyz) - mazalsoft.xyz
 
 ## License
 

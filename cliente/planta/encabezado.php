@@ -1,3 +1,6 @@
+<!-- Obtener el objeto de datos del usuario actual. -->
+<?php $user = current_user(); ?>
+
 <!DOCTYPE html><!-- Tipo de documento. -->
   
   <!-- Inicio del documento HTML. -->
@@ -6,15 +9,24 @@
 	<!-- Inicio del encabezado del documento. -->
     <head>    <meta charset="UTF-8">
 
-		<!-- Título del documento. -->
-		<title>¡El titulo esta vacio!</title>
+		<!-- El título del documento es dinámico. -->
+		<title><?php if (!empty($page_title))
+           echo remove_junk($page_title);
+            elseif(!empty($user))
+           echo ucfirst($user['name']);
+            else echo "Mazalsoft Inventario";?></title>
 		
 		<!-- Estilo del documento. -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+        <link rel="stylesheet" href="herramientas/glamur/css/estilo.css" />
+
     
    </head> <!-- Fin del encabezado del documento. -->
   <body> <!-- Inicio del cuerpo del documento. -->
+  
+    <!-- Comprobar si el usuario tiene una sesión activa. -->
+    <?php  if ($session->isUserLoggedIn(true)): ?>
   
     <!-- Inicio del encabezado del cuerpo del documento. -->
     <header id="header">
@@ -25,7 +37,8 @@
       <div class="header-content">
 	  <!-- Inicio de la fecha en el encabezado del cuerpo del documento. -->
       <div class="header-date pull-left">
-        <strong>¡Aquí va la fecha!</strong>
+	    <!-- Fijar la fecha actual del servidor en el encabezado del cliente. -->
+        <strong><?php echo date("F j, Y, g:i a");?></strong>
       </div>
 	  
 	  <!-- Sección para la información básica del usuario. -->
@@ -34,7 +47,7 @@
           <li class="profile">
             <a href="#" data-toggle="dropdown" class="toggle" aria-expanded="false">
 			  <!-- Imagen del usuario actual. -->
-              <img src="" alt="user-image" class="img-circle img-inline">
+              <img src="https://i.ibb.co/ngYFtKx/icon-no-image.png" alt="user-image" class="img-circle img-inline">
               <span>¡Aquí va el nombre del usuario!<i class="caret"></i></span>
             </a>
 			<!-- Inicio del menu para personalizar el usuario actual. -->
@@ -69,8 +82,25 @@
      </div>
     </header> <!-- Fin del encabezado del cuerpo del documento. -->
     <div class="sidebar"> <!-- Inicio del sidebar del cuerpo del documento. -->
+	
+	 <?php if($user['user_level'] === '1'): ?>
+        <!-- admin menu -->
+      <?php include_once('menu_admin');?>
+
+      <?php elseif($user['user_level'] === '2'): ?>
+        <!-- Special user -->
+      <?php include_once('menu_especial.php');?>
+
+      <?php elseif($user['user_level'] === '3'): ?>
+        <!-- User menu -->
+      <?php include_once('menu_usuario.php');?>
+
+      <?php endif;?>
       
    </div> 
+   
+   <!-- Fin condición que comprueba si el usuario tiene una sesión activa. -->
+   <?php endif;?> 
  <!-- Inicio del contenido del cuerpo del documento. -->
 <div class="page">
   <div class="container-fluid"> <!-- Inicio del contenedor para el contenido del cuerpo del documento. -->
