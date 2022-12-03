@@ -9,7 +9,7 @@ class  Media {
   public $fileType;
   public $fileTempPath;
   //Set destination for upload
-  public $userPath = SITE_ROOT.DS.'..'.DS.'uploads/users';
+  public $userPath = SITE_ROOT.DS.'..'.DS.'..'.DS.'memoria/persistente/almacenamiento-usuario/imagenes';
   public $productPath = SITE_ROOT.DS.'..'.DS.'uploads/products';
 
 

@@ -19,7 +19,7 @@
 		<!-- Estilo del documento. -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
-        <link rel="stylesheet" href="herramientas/glamur/css/estilo.css" />
+        <link rel="stylesheet" href="<?php echo ROUTE_SERVER_HOST;?>herramientas/glamur/css/estilo.css" />
 
     
    </head> <!-- Fin del encabezado del documento. -->
@@ -47,22 +47,22 @@
           <li class="profile">
             <a href="#" data-toggle="dropdown" class="toggle" aria-expanded="false">
 			  <!-- Imagen del usuario actual. -->
-              <img src="https://i.ibb.co/ngYFtKx/icon-no-image.png" alt="user-image" class="img-circle img-inline">
-              <span>¡Aquí va el nombre del usuario!<i class="caret"></i></span>
+              <img src="<?php echo ROUTE_SERVER_HOST;?>servidor/memoria/persistente/almacenamiento-usuario/imagenes/<?php echo $user['image'];?>" alt="user-image" class="img-circle img-inline">
+              <span><?php echo remove_junk(ucfirst($user['name'])); ?><i class="caret"></i></span>
             </a>
 			<!-- Inicio del menu para personalizar el usuario actual. -->
             <ul class="dropdown-menu">
               <li>
 			  
 			      <!-- Item para personalizar el perfil del usuario. -->
-                  <a href="">
+                  <a href="<?php echo ROUTE_SERVER_HOST;?>servidor/procesador/api/leer_registro/perfil_usuario.php?id=<?php echo (int)$user['id'];?>">
                       <i class="glyphicon glyphicon-user"></i>
                       Perfil
                   </a>
               </li>
              <li>
 			     <!-- Item para personalizar la configuración del usuario. -->
-                 <a href="" title="edit account">
+                 <a href="<?php echo ROUTE_SERVER_HOST;?>servidor/procesador/api/editar_registro/editar_cuenta.php" title="Editar cuenta">
                      <i class="glyphicon glyphicon-cog"></i>
                      Configuración
                  </a>
@@ -70,9 +70,9 @@
              <li class="last">
 			 
 			     <!-- Item para cerrar sesión del usuario actual. -->
-                 <a href="">
+                 <a href= <?php echo ROUTE_SERVER_HOST."servidor/procesador/autenticacion/cerrar_sesion.php"?>
                      <i class="glyphicon glyphicon-off"></i>
-                     Cerrar sesión
+                     Salir
                  </a>
              </li>
            </ul>
@@ -85,7 +85,7 @@
 	
 	 <?php if($user['user_level'] === '1'): ?>
         <!-- admin menu -->
-      <?php include_once('menu_admin');?>
+      <?php include_once('menu_admin.php');?>
 
       <?php elseif($user['user_level'] === '2'): ?>
         <!-- Special user -->

@@ -3,6 +3,11 @@
 // CARGADOR DE CONTROLADORES.
 
 // -----------------------------------------------------------------------
+// DEFINIR LA RUTA URL RAÍZ DEL SERVIDOR
+// -----------------------------------------------------------------------
+define("ROUTE_SERVER_HOST", 'http://localhost/xyz.mazalsoftllc.inventario/');
+
+// -----------------------------------------------------------------------
 // DEFINIR ALIAS DE SEPARADORES
 // -----------------------------------------------------------------------
 define("URL_SEPARATOR", '/');

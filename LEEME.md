@@ -38,14 +38,23 @@ Arquitectura servidor (servidor/procesador/controladores/):
 Arquitectura servidor (servidor/procesador/autenticacion/):
 
 - Esto es el módulo autorizacion (autorizacion.php)
+- Esto es el módulo autorizacion (cerrar_sesion.php)
 
 ##### API
 Arquitectura servidor (servidor/procesador/api/):
 ###### Leer colección
 Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 
-- Esto es el punto final tablero (tablero.php)
+###### Leer registro
+Arquitectura servidor (servidor/procesador/api/leer_registro):
 
+- Esto es el punto final perfil del usuario (perfil_usuario.php)
+
+###### Editar registro
+Arquitectura servidor (servidor/procesador/api/leer_coleccion):
+
+- Esto es el punto final editar la contraseña del usuario (editar_contrasena.php)
+- Esto es el punto final editar el perfil del usuario (cambiar_contraseña.php)
 _____________________
 ##### Glamur
 Arquitectura herramientas (herramientas/glamur/):
@@ -81,7 +90,13 @@ Mazalsoft Inventario es de código abierto.
 - [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
 - [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
 - [Whatsapp](https://wa.link/125i7q) - +57 3153774638
-- [Sitio web](https://www.mazalsoft.xyz) - mazalsoft.xyz
+- [Sitio web](https://www.mazalsoft.xyz) - mazalsoft.
+- [Github](https://github.com/mazalsoft) - Perfil desarrollador en GitHub.
+- [Youtube](https://www.youtube.com/@mazalsoftllc) - Perfil en Youtube
+- [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
+- [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
+
+
 
 ## License
 
