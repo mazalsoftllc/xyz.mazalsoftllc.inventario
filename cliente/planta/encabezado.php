@@ -19,7 +19,7 @@
 		<!-- Estilo del documento. -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
-        <link rel="stylesheet" href="<?php echo ROUTE_SERVER_HOST;?>herramientas/glamur/css/estilo.css" />
+        <link rel="stylesheet" href="<?php echo ROUTE_SERVER_HOST;?>herramientas/glamur/css/estilo.css"/>
 
     
    </head> <!-- Fin del encabezado del documento. -->
@@ -70,7 +70,7 @@
              <li class="last">
 			 
 			     <!-- Item para cerrar sesión del usuario actual. -->
-                 <a href= <?php echo ROUTE_SERVER_HOST."servidor/procesador/autenticacion/cerrar_sesion.php"?>
+                 <a href= "<?php echo ROUTE_SERVER_HOST;?>servidor/procesador/autenticacion/cerrar_sesion.php">
                      <i class="glyphicon glyphicon-off"></i>
                      Salir
                  </a>

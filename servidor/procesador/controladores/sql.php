@@ -2,7 +2,7 @@
   require_once('cargador.php');
 
 /*--------------------------------------------------------------*/
-/* Función para encontrar todas las filas de la tabla de la base de datos por nombre de tabla.
+/* Function for find all database table rows by table name
 /*--------------------------------------------------------------*/
 function find_all($table) {
    global $db;
@@ -12,7 +12,7 @@ function find_all($table) {
    }
 }
 /*--------------------------------------------------------------*/
-/* Función para realizar consultas
+/* Function for Perform queries
 /*--------------------------------------------------------------*/
 function find_by_sql($sql)
 {
@@ -22,7 +22,7 @@ function find_by_sql($sql)
  return $result_set;
 }
 /*--------------------------------------------------------------*/
-/*  Función para buscar datos de la tabla por id
+/*  Function for Find data from table by id
 /*--------------------------------------------------------------*/
 function find_by_id($table,$id)
 {
@@ -37,7 +37,7 @@ function find_by_id($table,$id)
      }
 }
 /*--------------------------------------------------------------*/
-/* Función para eliminar datos de la tabla por id
+/* Function for Delete data from table by id
 /*--------------------------------------------------------------*/
 function delete_by_id($table,$id)
 {
@@ -52,7 +52,7 @@ function delete_by_id($table,$id)
    }
 }
 /*--------------------------------------------------------------*/
-/* Función para Count id Por nombre de tabla
+/* Function for Count id  By table name
 /*--------------------------------------------------------------*/
 
 function count_by_id($table){
@@ -65,7 +65,7 @@ function count_by_id($table){
   }
 }
 /*--------------------------------------------------------------*/
-/* Determinar si existe una tabla de base de datos
+/* Determine if database table exists
 /*--------------------------------------------------------------*/
 function tableExists($table){
   global $db;
@@ -78,8 +78,8 @@ function tableExists($table){
       }
   }
  /*--------------------------------------------------------------*/
- /*Inicie sesión con los datos proporcionados en $_POST,
- /*procedente del formulario de inicio de sesión.
+ /* Login with the data provided in $_POST,
+ /* coming from the login form.
 /*--------------------------------------------------------------*/
   function authenticate($username='', $password='') {
     global $db;
@@ -97,9 +97,9 @@ function tableExists($table){
    return false;
   }
   /*--------------------------------------------------------------*/
-  /* Inicie sesión con los datos proporcionados en $_POST,
-  /* procedente del formulario login_v2.php.
-  /* Si usó este método, elimine la función de autenticación.
+  /* Login with the data provided in $_POST,
+  /* coming from the login_v2.php form.
+  /* If you used this method then remove authenticate function.
  /*--------------------------------------------------------------*/
    function authenticate_v2($username='', $password='') {
      global $db;
@@ -119,7 +119,7 @@ function tableExists($table){
 
 
   /*--------------------------------------------------------------*/
-  /* Encuentra el usuario de inicio de sesión actual por ID de sesión
+  /* Find current log in user by session id
   /*--------------------------------------------------------------*/
   function current_user(){
       static $current_user;
@@ -133,8 +133,8 @@ function tableExists($table){
     return $current_user;
   }
   /*--------------------------------------------------------------*/
-  /* Buscar todos los usuarios por 
-  /* Unirse a la tabla de usuarios y a la tabla de grupos de usuarios
+  /* Find all user by
+  /* Joining users table and user gropus table
   /*--------------------------------------------------------------*/
   function find_all_user(){
       global $db;
@@ -148,7 +148,7 @@ function tableExists($table){
       return $result;
   }
   /*--------------------------------------------------------------*/
-  /* Función para actualizar el último inicio de sesión de una usuario.
+  /* Function to update the last log in of a user
   /*--------------------------------------------------------------*/
 
  function updateLastLogIn($user_id)
@@ -161,7 +161,7 @@ function tableExists($table){
 	}
 
   /*--------------------------------------------------------------*/
-  /* Encuentra todo el nombre del grupo
+  /* Find all Group name
   /*--------------------------------------------------------------*/
   function find_by_groupName($val)
   {
@@ -171,7 +171,7 @@ function tableExists($table){
     return($db->num_rows($result) === 0 ? true : false);
   }
   /*--------------------------------------------------------------*/
-  /* Buscar nivel de grupo
+  /* Find group level
   /*--------------------------------------------------------------*/
   function find_by_groupLevel($level)
   {
@@ -181,7 +181,7 @@ function tableExists($table){
     return($db->num_rows($result) === 0 ? true : false);
   }
   /*--------------------------------------------------------------*/
-  /* Función para verificar qué nivel de usuario tiene acceso a la página
+  /* Function for cheaking which user level has access to page
   /*--------------------------------------------------------------*/
    function page_require_level($require_level){
      global $session;
@@ -190,23 +190,23 @@ function tableExists($table){
      //if user not login
      if (!$session->isUserLoggedIn(true)):
             $session->msg('d','Please login...');
-            redirect(ROUTE_SERVER_HOST.'index.php', false);
+            redirect('index.php', false);
       //if Group status Deactive
      elseif($login_level['group_status'] === '0'):
            $session->msg('d','This level user has been band!');
-           redirect(ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/tablero.php',false);
+           redirect('home.php',false);
       //cheackin log in User level and Require level is Less than or equal to
      elseif($current_user['user_level'] <= (int)$require_level):
               return true;
       else:
             $session->msg("d", "Sorry! you dont have permission to view the page.");
-            redirect(ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/tablero.php', false);
+            redirect('home.php', false);
         endif;
 
      }
    /*--------------------------------------------------------------*/
-   /* Función para encontrar todos los nombres de productos 
-   /* ÚNETE con la categoría y la tabla de la base de datos de medios
+   /* Function for Finding all product name
+   /* JOIN with categorie  and media database table
    /*--------------------------------------------------------------*/
   function join_product_table(){
      global $db;
@@ -220,8 +220,8 @@ function tableExists($table){
 
    }
   /*--------------------------------------------------------------*/
-  /* Función para encontrar todos los nombres de productos
-  /* Solicitud proveniente de ajax.php para sugerencia automática
+  /* Function for Finding all product name
+  /* Request coming from ajax.php for auto suggest
   /*--------------------------------------------------------------*/
 
    function find_product_by_title($product_name){
@@ -233,8 +233,8 @@ function tableExists($table){
    }
 
   /*--------------------------------------------------------------*/
-  /* unción para encontrar toda la información del producto por título del producto
-  /* Solicitud proveniente de ajax.php
+  /* Function for Finding all product info by product title
+  /* Request coming from ajax.php
   /*--------------------------------------------------------------*/
   function find_all_product_info_by_title($title){
     global $db;
@@ -245,7 +245,7 @@ function tableExists($table){
   }
 
   /*--------------------------------------------------------------*/
-  /* Función para Actualizar cantidad de producto
+  /* Function for Update product quantity
   /*--------------------------------------------------------------*/
   function update_product_qty($qty,$p_id){
     global $db;
@@ -257,7 +257,7 @@ function tableExists($table){
 
   }
   /*--------------------------------------------------------------*/
-  /* Función para mostrar Producto reciente agregado
+  /* Function for Display Recent product Added
   /*--------------------------------------------------------------*/
  function find_recent_product_added($limit){
    global $db;
@@ -281,7 +281,7 @@ function tableExists($table){
    return $db->query($sql);
  }
  /*--------------------------------------------------------------*/
- /* Función para encontrar el producto más vendido
+ /* Function for find all sales
  /*--------------------------------------------------------------*/
  function find_all_sale(){
    global $db;
@@ -292,7 +292,7 @@ function tableExists($table){
    return find_by_sql($sql);
  }
  /*--------------------------------------------------------------*/
- /* Función para mostrar venta reciente
+ /* Function for Display Recent sale
  /*--------------------------------------------------------------*/
 function find_recent_sale_added($limit){
   global $db;
@@ -303,7 +303,7 @@ function find_recent_sale_added($limit){
   return find_by_sql($sql);
 }
 /*--------------------------------------------------------------*/
-/* Función para generar informe de ventas por dos fechas
+/* Function for Generate sales report by two dates
 /*--------------------------------------------------------------*/
 function find_sale_by_dates($start_date,$end_date){
   global $db;
@@ -336,7 +336,7 @@ function  dailySales($year,$month){
   return find_by_sql($sql);
 }
 /*--------------------------------------------------------------*/
-/* Función para generar informe de ventas diarias
+/* Function for Generate Monthly sales report
 /*--------------------------------------------------------------*/
 function  monthlySales($year){
   global $db;

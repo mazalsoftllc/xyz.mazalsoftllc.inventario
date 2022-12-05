@@ -45,6 +45,11 @@ Arquitectura servidor (servidor/procesador/api/):
 ###### Leer colección
 Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 
+- Esto es el tablero (tablero.php)
+- Esto es el noticiero contable (noticiero_contable.php)
+- Esto es el control de usuarios (usuarios.php)
+- Esto es el control de grupos (grupos.php)
+
 ###### Leer registro
 Arquitectura servidor (servidor/procesador/api/leer_registro):
 
@@ -53,8 +58,10 @@ Arquitectura servidor (servidor/procesador/api/leer_registro):
 ###### Editar registro
 Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 
-- Esto es el punto final editar la contraseña del usuario (editar_contrasena.php)
-- Esto es el punto final editar el perfil del usuario (cambiar_contraseña.php)
+- Esto es el punto final editar la contraseña del usuario (cambiar_contrasena.php)
+- Esto es el punto final editar el perfil del usuario (cambiar_cuenta.php)
+- Esto es el punto final editar grupo (editar_grupo.php)
+- Esto es el punto final editar usuario (editar_usuario.php)
 _____________________
 ##### Glamur
 Arquitectura herramientas (herramientas/glamur/):

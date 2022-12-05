@@ -7,22 +7,25 @@
    
   <!-- Item de navegación hacía el tablero. -->
   <li>
-    <a href="#">
+    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/noticiero_contable.php'?>">
       <i class="glyphicon glyphicon-home"></i>
-      <span>Tablero</span>
+      <span>Noticiero contable</span>
     </a>
   </li>
   
-   <!-- Item de navegación hacía la gestión de usuarios. -->
+   <!-- Item de navegación hacía la gestión de grupos. -->
   <li>
-    <a href="#" class="submenu-toggle">
+    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/grupos.php'?>" >
       <i class="glyphicon glyphicon-user"></i>
-      <span>Gestión de usuarios</span>
+      <span>Gestionar grupos</span>
     </a>
-    <ul class="nav submenu">
-      <li><a href="#">Gestionar grupos</a> </li>
-      <li><a href="#">Gestionar usuarios</a> </li>
-   </ul>
+  </li>
+  <!-- Item de navegación hacía la gestión de usuarios. -->
+  <li>
+    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/usuarios.php'?>" >
+      <i class="glyphicon glyphicon-user"></i>
+      <span>Gestionar usuarios</span>
+    </a>
   </li>
   
    <!-- Item de navegación hacía las categorías. -->
