@@ -30,9 +30,9 @@
   
    <!-- Item de navegación hacía las categorías. -->
   <li>
-    <a href="#" >
+    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/categorias.php'?>" >
       <i class="glyphicon glyphicon-indent-left"></i>
-      <span>Categorías</span>
+      <span>Gestionar categorías</span>
     </a>
   </li>
   
