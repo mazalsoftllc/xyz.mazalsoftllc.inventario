@@ -42,6 +42,14 @@ Arquitectura servidor (servidor/procesador/autenticacion/):
 
 ##### API
 Arquitectura servidor (servidor/procesador/api/):
+
+###### Crear registro
+Arquitectura servidor (servidor/procesador/api/crear_registro):
+
+- Esto es un nuevo grupo (nuevo_grupo.php)
+- Esto es un nuevo usuario (nuevo_usuario.php)
+- Esto es la imagen de un producto (imagen_producto.php)
+
 ###### Leer colección
 Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 
@@ -49,6 +57,8 @@ Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 - Esto es el noticiero contable (noticiero_contable.php)
 - Esto es el control de usuarios (usuarios.php)
 - Esto es el control de grupos (grupos.php)
+- Esto es el control de categorías (categorias.php)
+
 
 ###### Leer registro
 Arquitectura servidor (servidor/procesador/api/leer_registro):
@@ -62,6 +72,16 @@ Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 - Esto es el punto final editar el perfil del usuario (cambiar_cuenta.php)
 - Esto es el punto final editar grupo (editar_grupo.php)
 - Esto es el punto final editar usuario (editar_usuario.php)
+- Esto es el punto final editar categoria (editar_categoria.php)
+
+###### Eliminar registro
+Arquitectura servidor (servidor/procesador/api/eliminar_registro):
+
+- Esto es el punto final eliminar un usuario (eliminar_usuario.php)
+- Esto es el punto final eliminar un grupo (eliminar_grupo.php)
+- Esto es el punto final eliminar una categoría (eliminar_categoria.php)
+- Esto es el punto final eliminar una imagen del producto (eliminar_imagen_producto.php)
+
 _____________________
 ##### Glamur
 Arquitectura herramientas (herramientas/glamur/):
@@ -102,8 +122,6 @@ Mazalsoft Inventario es de código abierto.
 - [Youtube](https://www.youtube.com/@mazalsoftllc) - Perfil en Youtube
 - [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
 - [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
-
-
 
 ## License
 

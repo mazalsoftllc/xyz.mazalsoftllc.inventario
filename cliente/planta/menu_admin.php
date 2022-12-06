@@ -36,6 +36,14 @@
     </a>
   </li>
   
+  <!-- Item de navegación hacía multimedia. -->
+  <li>
+    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/crear_registro/imagen_producto.php'?>" >
+      <i class="glyphicon glyphicon-picture"></i>
+      <span>Multimedia</span>
+    </a>
+  </li>
+  
    <!-- Item de navegación hacía los productos. -->
   <li>
     <a href="#" class="submenu-toggle">
@@ -50,13 +58,7 @@
    </ul>
   </li>
   
-   <!-- Item de navegación hacía multimedia. -->
-  <li>
-    <a href="media.php" >
-      <i class="glyphicon glyphicon-picture"></i>
-      <span>Multimedia</span>
-    </a>
-  </li>
+   
   
   <!-- Item de navegación hacía gestión de ventas. -->
   <li>
