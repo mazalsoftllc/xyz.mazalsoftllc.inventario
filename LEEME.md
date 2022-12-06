@@ -50,6 +50,9 @@ Arquitectura servidor (servidor/procesador/api/crear_registro):
 - Esto es un nuevo usuario (nuevo_usuario.php)
 - Esto es la imagen de un producto (imagen_producto.php)
 - Esto es un producto (crear_producto.php)
+- Esto es una venta (crear_venta.php)
+- Esto es una venta ajax (crear_venta_ajax.php)
+
 
 
 ###### Leer colección
@@ -61,6 +64,8 @@ Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 - Esto es el control de grupos (grupos.php)
 - Esto es el control de categorías (categorias.php)
 - Esto es el control de productos (producto.php)
+- Esto es el control de ventas (venta.php)
+
 
 ###### Leer registro
 Arquitectura servidor (servidor/procesador/api/leer_registro):
@@ -76,8 +81,7 @@ Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 - Esto es el punto final editar usuario (editar_usuario.php)
 - Esto es el punto final editar categoria (editar_categoria.php)
 - Esto es el punto final editar un producto (editar_producto.php)
-
-
+- Esto es el punto final editar una venta (editar_venta.php)
 
 ###### Eliminar registro
 Arquitectura servidor (servidor/procesador/api/eliminar_registro):
@@ -87,7 +91,7 @@ Arquitectura servidor (servidor/procesador/api/eliminar_registro):
 - Esto es el punto final eliminar una categoría (eliminar_categoria.php)
 - Esto es el punto final eliminar una imagen del producto (eliminar_imagen_producto.php)
 - Esto es el punto final eliminar un producto (eliminar_producto.php)
-
+- Esto es el punto final eliminar una venta (eliminar_venta.php)
 
 _____________________
 ##### Glamur
@@ -98,6 +102,18 @@ Arquitectura herramientas (herramientas/glamur/css/):
 
 - Esto es la hoja de estilo (estilo.css)
 _____________________
+
+##### IA (Inteligencia artifical)
+Arquitectura herramientas (herramientas/ia/):
+
+###### JS
+Arquitectura herramientas (herramientas/ia/js/):
+
+- Esto es el cargador de la logica del lado del cliente (cargador.js)
+- Esto es la libreria de funciones del lado del cliente (funciones.js)
+
+_____________________
+
 ##### Base de datos
 Arquitectura base de datos (basede-de-datos/):
 

@@ -50,29 +50,18 @@
       <i class="glyphicon glyphicon-th-large"></i>
       <span>Productos</span>
     </a>
-    <ul class="nav submenu">
-	    <!-- Item de navegación hacía gestionar productos. -->
-       <li><a href="product.php">Gestionar productos</a> </li>
-	    <!-- Item de navegación hacía agregar productos. -->
-       <li><a href="add_product.php">Agregar productos</a> </li>
-   </ul>
   </li>
   
    
   
   <!-- Item de navegación hacía gestión de ventas. -->
   <li>
-    <a href="#" class="submenu-toggle">
+    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/venta.php'?>" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-list"></i>
-       <span>Ventas</span>
+       <span>Gestión de ventas</span>
       </a>
 	  
-      <ul class="nav submenu">
-	      <!-- Item de navegación hacía gestionar ventas. -->
-         <li><a href="sales.php">Gestionar ventas</a> </li>
-		  <!-- Item de navegación hacía agregar ventas. -->
-         <li><a href="add_sale.php">Agregar venta</a> </li>
-     </ul>
+    
   </li>
   
    <!-- Item de navegación hacía reportes. -->

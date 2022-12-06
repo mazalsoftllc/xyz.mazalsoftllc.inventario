@@ -16,16 +16,11 @@
   
   <!-- Item de navegación hacía ventas. -->
   <li>
-    <a href="#" class="submenu-toggle">
+    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/venta.php'?>" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-list"></i>
-       <span>Ventas</span>
-      </a>
-      <ul class="nav submenu">
-	     <!-- Item gestión de ventas. -->
-         <li><a href="#">Gestión de ventas/a> </li>
-         <!-- Item agregar ventas. -->
-		 <li><a href="#">Agregar ventas</a> </li>
-     </ul>
+       <span>Gestión de ventas</span>
+    </a>
+      
   </li>
   <li>
     <a href="#" class="submenu-toggle">
