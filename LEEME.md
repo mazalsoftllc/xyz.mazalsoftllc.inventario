@@ -49,6 +49,8 @@ Arquitectura servidor (servidor/procesador/api/crear_registro):
 - Esto es un nuevo grupo (nuevo_grupo.php)
 - Esto es un nuevo usuario (nuevo_usuario.php)
 - Esto es la imagen de un producto (imagen_producto.php)
+- Esto es un producto (crear_producto.php)
+
 
 ###### Leer colección
 Arquitectura servidor (servidor/procesador/api/leer_coleccion):
@@ -58,7 +60,7 @@ Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 - Esto es el control de usuarios (usuarios.php)
 - Esto es el control de grupos (grupos.php)
 - Esto es el control de categorías (categorias.php)
-
+- Esto es el control de productos (producto.php)
 
 ###### Leer registro
 Arquitectura servidor (servidor/procesador/api/leer_registro):
@@ -73,6 +75,9 @@ Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 - Esto es el punto final editar grupo (editar_grupo.php)
 - Esto es el punto final editar usuario (editar_usuario.php)
 - Esto es el punto final editar categoria (editar_categoria.php)
+- Esto es el punto final editar un producto (editar_producto.php)
+
+
 
 ###### Eliminar registro
 Arquitectura servidor (servidor/procesador/api/eliminar_registro):
@@ -81,6 +86,8 @@ Arquitectura servidor (servidor/procesador/api/eliminar_registro):
 - Esto es el punto final eliminar un grupo (eliminar_grupo.php)
 - Esto es el punto final eliminar una categoría (eliminar_categoria.php)
 - Esto es el punto final eliminar una imagen del producto (eliminar_imagen_producto.php)
+- Esto es el punto final eliminar un producto (eliminar_producto.php)
+
 
 _____________________
 ##### Glamur

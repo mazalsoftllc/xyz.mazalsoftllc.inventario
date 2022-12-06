@@ -46,7 +46,7 @@
   
    <!-- Item de navegación hacía los productos. -->
   <li>
-    <a href="#" class="submenu-toggle">
+    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/producto.php'?>" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-large"></i>
       <span>Productos</span>
     </a>

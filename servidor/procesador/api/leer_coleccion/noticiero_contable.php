@@ -191,12 +191,12 @@
 
         <div class="list-group">
       <?php foreach ($recent_products as  $recent_product): ?>
-            <a class="list-group-item clearfix" href="editar_producto.php?id=<?php echo    (int)$recent_product['id'];?>">
+            <a class="list-group-item clearfix" href="<?php echo ROUTE_SERVER_HOST;?>servidor/procesador/api/editar_registro/editar_producto.php?id=<?php echo    (int)$recent_product['id'];?>">
                 <h4 class="list-group-item-heading">
                  <?php if($recent_product['media_id'] === '0'): ?>
-                    <img class="img-avatar img-circle" src="../../memoria/persistente/almacenamiento-producto/no_image.jpg" alt="">
+                    <img class="img-avatar img-circle" src="<?php echo ROUTE_SERVER_HOST;?>servidor/memoria/persistente/almacenamiento-producto/imagenes/no_image.jpg" alt="">
                   <?php else: ?>
-                  <img class="img-avatar img-circle" src="../../memoria/persistente/almacenamiento-producto/<?php echo $recent_product['image'];?>" alt="" />
+                  <img class="img-avatar img-circle" src="<?php echo ROUTE_SERVER_HOST;?>servidor/memoria/persistente/almacenamiento-producto/imagenes/<?php echo $recent_product['image'];?>" alt="" />
                 <?php endif;?>
                 <?php echo remove_junk(first_character($recent_product['name']));?>
                   <span class="label label-warning pull-right">
@@ -219,6 +219,6 @@
 
 
 
-<?php  
+<?php
  // Incluir el encabezado.
  include_once('../../../../cliente/planta/pie_pagina.php'); ?>
