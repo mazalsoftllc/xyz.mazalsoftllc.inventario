@@ -16,6 +16,11 @@
            echo ucfirst($user['name']);
             else echo "Mazalsoft Inventario";?></title>
 		
+		<!-- Favicon. -->
+		 <link rel="icon" type="image/x-icon" href="<?php echo ROUTE_SERVER_HOST;?>herramientas/glamur/favicon/favicon.ico">	
+
+ 
+		
 		<!-- Estilo del documento. -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />

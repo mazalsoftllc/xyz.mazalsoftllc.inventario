@@ -328,6 +328,7 @@ function  dailySales($year,$month){
   global $db;
   $sql  = "SELECT s.qty,";
   $sql .= " DATE_FORMAT(s.date, '%Y-%m-%e') AS date,p.name,";
+  $sql .= "SUM(s.qty) AS total_sales,";
   $sql .= "SUM(p.sale_price * s.qty) AS total_saleing_price";
   $sql .= " FROM sales s";
   $sql .= " LEFT JOIN products p ON s.product_id = p.id";
@@ -342,6 +343,7 @@ function  monthlySales($year){
   global $db;
   $sql  = "SELECT s.qty,";
   $sql .= " DATE_FORMAT(s.date, '%Y-%m-%e') AS date,p.name,";
+  $sql .= "SUM(s.qty) AS total_sales,";
   $sql .= "SUM(p.sale_price * s.qty) AS total_saleing_price";
   $sql .= " FROM sales s";
   $sql .= " LEFT JOIN products p ON s.product_id = p.id";

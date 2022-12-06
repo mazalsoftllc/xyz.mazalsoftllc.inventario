@@ -30,11 +30,11 @@
       </a>
       <ul class="nav submenu">
 	    <!-- Item reporte de ventas por fecha. -->
-        <li><a href="sales_report.php">Ventas por fechas </a></li>
+        <li><a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/reporte_ventas.php'?>">Ventas por fechas </a></li>
 		<!-- Item reporte de ventas mensuales. -->
-        <li><a href="monthly_sales.php">Ventas mensuales</a></li>
+        <li><a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/reporte_ventas_mensuales.php'?>">Ventas mensuales </a></li>
 		<!-- Item reporte de ventas diarias. -->
-        <li><a href="daily_sales.php">Ventas diarias</a> </li>
+        <li><a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/reporte_ventas_diarias.php'?>">Ventas diarias </a></li>
       </ul>
   </li>
 </ul>

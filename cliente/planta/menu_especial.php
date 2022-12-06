@@ -15,7 +15,7 @@
   
   <!-- Item de navegación hacía las categorías. -->
   <li>
-    <a href="#" >
+   <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/categorias.php'?>" >
       <i class="glyphicon glyphicon-indent-left"></i>
       <span>Csategoría</span>
     </a>
@@ -23,7 +23,7 @@
   
    <!-- Item de navegación hacía los productos. -->
   <li>
-    <a href="#" class="submenu-toggle">
+  <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/producto.php'?>" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-large"></i>
       <span>Producto</span>
     </a>
@@ -35,7 +35,7 @@
   
    <!-- Item de navegación hacía los medios multimedia. -->
   <li>
-    <a href="#" >
+      <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/crear_registro/imagen_producto.php'?>">
       <i class="glyphicon glyphicon-picture"></i>
       <span>Multimedia</span>
     </a>

@@ -38,7 +38,7 @@
   
   <!-- Item de navegación hacía multimedia. -->
   <li>
-    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/crear_registro/imagen_producto.php'?>" >
+    <a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/crear_registro/imagen_producto.php'?>">
       <i class="glyphicon glyphicon-picture"></i>
       <span>Multimedia</span>
     </a>
@@ -72,11 +72,11 @@
       </a>
       <ul class="nav submenu">
 	    <!-- Item de navegación hacía ventas por un rango de fechas definido. -->
-        <li><a href="#">Ventas por fechas</a></li>
+         <li><a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/reporte_ventas.php'?>">Ventas por fechas </a></li>
 		 <!-- Item de navegación hacía ventas por mes. -->
-        <li><a href="#">Ventas mensuales</a></li>
+        <li><a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/reporte_ventas_mensuales.php'?>">Ventas mensuales </a></li>
 		 <!-- Item de navegación hacía ventas diarias. -->
-        <li><a href="#">Ventas diarias</a> </li>
+        <li><a href="<?php  echo ROUTE_SERVER_HOST.'servidor/procesador/api/leer_coleccion/reporte_ventas_diarias.php'?>">Ventas diarias </a></li>
       </ul>
   </li>
 </ul>
