@@ -154,16 +154,6 @@ Mazalsoft Inventario es de código abierto.
 - [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
 - [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
 
-## Development
-- [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
-- [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
-- [Whatsapp](https://wa.link/125i7q) - +57 3153774638
-- [Sitio web](https://www.mazalsoft.xyz) - mazalsoft.
-- [Github](https://github.com/mazalsoft) - Perfil desarrollador en GitHub.
-- [Youtube](https://www.youtube.com/@mazalsoftllc) - Perfil en Youtube
-- [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
-- [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
-
 _____________________
 
 ## Algoritmo de instalación estándar.
