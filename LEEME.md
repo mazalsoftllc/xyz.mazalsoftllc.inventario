@@ -65,7 +65,10 @@ Arquitectura servidor (servidor/procesador/api/leer_coleccion):
 - Esto es el control de categorías (categorias.php)
 - Esto es el control de productos (producto.php)
 - Esto es el control de ventas (venta.php)
-
+- Esto es el reporte de ventas (reporte_ventas.php)
+- Esto es el reporte de ventas (reporte_ventas_procesamiento.php)
+- Esto es el reporte de ventas diarias (reporte_ventas_diarias.php)
+- Esto es el reporte de ventas mensuales (reporte_ventas_mensuales.php)
 
 ###### Leer registro
 Arquitectura servidor (servidor/procesador/api/leer_registro):
@@ -101,6 +104,11 @@ Arquitectura herramientas (herramientas/glamur/):
 Arquitectura herramientas (herramientas/glamur/css/):
 
 - Esto es la hoja de estilo (estilo.css)
+
+###### Favicon
+Arquitectura herramientas (herramientas/glamur/favicon/):
+
+- Esto es el favicon (favicon.ico)
 _____________________
 
 ##### IA (Inteligencia artifical)
@@ -140,11 +148,33 @@ Mazalsoft Inventario es de código abierto.
 - [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
 - [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
 - [Whatsapp](https://wa.link/125i7q) - +57 3153774638
+- [Sitio web](https://www.mazalsoft.xyz/inventario) - Mazalsoft Inventario
+- [Github](https://github.com/mazalsoft) - Perfil desarrollador en GitHub.
+- [Youtube](https://www.youtube.com/@mazalsoftllc) - Perfil en Youtube
+- [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
+- [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
+
+## Development
+- [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
+- [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
+- [Whatsapp](https://wa.link/125i7q) - +57 3153774638
 - [Sitio web](https://www.mazalsoft.xyz) - mazalsoft.
 - [Github](https://github.com/mazalsoft) - Perfil desarrollador en GitHub.
 - [Youtube](https://www.youtube.com/@mazalsoftllc) - Perfil en Youtube
 - [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
 - [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
+
+_____________________
+
+## Algoritmo de instalación estándar.
+1. Establecer la ruta url raíz del servidor web en la constante global del cargador.js
+2. Establecer la ruta url raíz del servidor web en el archivo de cargador.php 
+3. Establecer la configuración de conexión con el servidor de base de datos en el archivo configuracion.php
+4. Importar el script.sql para crear la estructura de tablas de la base de datos del sistema de inventario.
+
+## Instalación en un servidor web local.
+ - [Instructivo de instalación](https://youtu.be/16Pi7Rgvi34) - Ver video en Youtube
+
 
 ## License
 

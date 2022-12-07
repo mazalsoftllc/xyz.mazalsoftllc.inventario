@@ -20,7 +20,7 @@
 <!-- Estilo de la página para iniciar sesión. -->
 <div class="login-page"> 
     <div class="text-center">
-       <h1>Bienvendo/a</h1>
+       <h1>Bienvenido/a</h1>
        <p>Por favor inicia sesión.</p>
      </div>
 	  
@@ -32,7 +32,7 @@
         <div class="form-group">
 		
 		      <!-- Elemento de interfaz gráfica de usuario para ingresar el nombre. -->
-              <label for="username" class="control-label">Username</label>
+              <label for="username" class="control-label">Usuario</label>
               <input type="name" class="form-control" name="username" placeholder="Username">
         </div>
         <div class="form-group">
