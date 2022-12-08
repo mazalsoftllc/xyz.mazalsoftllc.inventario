@@ -33,6 +33,8 @@ Arquitectura servidor (servidor/procesador/controladores/):
 - Esto es el controlador multimedia (multimedia.php)
 - Esto es el controlador sesion (sesion.php)
 - Esto es el controlador sql (sql.php)
+- Esto es el controlador rutas (rutas.php)
+
 
 ##### Autenticación
 Arquitectura servidor (servidor/procesador/autenticacion/):

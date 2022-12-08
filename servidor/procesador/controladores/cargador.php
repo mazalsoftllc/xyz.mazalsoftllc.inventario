@@ -2,10 +2,6 @@
 
 // CARGADOR DE CONTROLADORES.
 
-// -----------------------------------------------------------------------
-// DEFINIR LA RUTA URL RAÍZ DEL SERVIDOR
-// -----------------------------------------------------------------------
-define("ROUTE_SERVER_HOST", 'http://localhost/xyz.mazalsoftllc.inventario/');
 
 // -----------------------------------------------------------------------
 // DEFINIR ALIAS DE SEPARADORES
@@ -20,12 +16,11 @@ define("DS", DIRECTORY_SEPARATOR);
 defined('SITE_ROOT')? null: define('SITE_ROOT', realpath(dirname(__FILE__)));
 define("LIB_PATH_INC", SITE_ROOT.DS);
 
-
+require_once(LIB_PATH_INC.'rutas.php');
 require_once(LIB_PATH_INC.'configuracion.php');
 require_once(LIB_PATH_INC.'funciones.php');
 require_once(LIB_PATH_INC.'sesion.php');
 require_once(LIB_PATH_INC.'multimedia.php');
 require_once(LIB_PATH_INC.'almacen_datos.php');
 require_once(LIB_PATH_INC.'sql.php');
-
 ?>
