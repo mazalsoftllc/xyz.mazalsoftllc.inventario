@@ -28,7 +28,7 @@ if(empty($errors)){
      updateLastLogIn($user_id);
 	 
 	 // Establecer el mensaje de la sesión.
-     $session->msg("s", "Bienvenido/a a Mazalsoft Inventario.");
+     $session->msg("success", "Bienvenido/a a Mazalsoft Inventario.");
 
     // Redireccionar el usuario a la página tablero.php 
 	redirect('../api/leer_coleccion/tablero.php',false);
@@ -36,7 +36,7 @@ if(empty($errors)){
   } else {
 	  
 	// Establecer el mensaje de la excepción al iniciar sesión (usuario/contraseña incorrecta).
-    $session->msg("d", "La combinación de usuario/contraseña es incorrecta ¡Por favor intente nuevamente!");
+    $session->msg("danger", "La combinación de usuario/contraseña es incorrecta ¡Por favor intente nuevamente!");
     redirect('../../../index.php',false);
   }
 

@@ -34,7 +34,7 @@ function validate_fields($var){
   foreach ($var as $field) {
     $val = remove_junk($_POST[$field]);
     if(isset($val) && $val==''){
-      $errors = $field ." can't be blank.";
+      $errors = $field ." no puede estar en blanco.";
       return $errors;
     }
   }
@@ -47,8 +47,7 @@ function display_msg($msg =''){
    $output = array();
    if(!empty($msg)) {
       foreach ($msg as $key => $value) {
-         $output  = "<div class=\"alert alert-{$key}\">";
-         $output .= "<a href=\"#\" class=\"close\" data-dismiss=\"alert\">&times;</a>";
+         $output  = "<div class=\"px-2 py-2 bg-gradient-{$key} text-white\">";
          $output .= remove_junk(first_character($value));
          $output .= "</div>";
       }
@@ -115,6 +114,17 @@ function randString($length = 5)
   for($x=0; $x<$length; $x++)
    $str .= $cha[mt_rand(0,strlen($cha))];
   return $str;
+}
+
+/*--------------------------------------------------------------*/
+/* Función para calcular el porcentaje.
+/* @parametro1 cantidad_parcial Esto es la cantidad parcial.
+/* @parametro2 cantidad_neta Esto es la cantidad neta.
+/*--------------------------------------------------------------*/
+function calcularPorcentaje($cantidad_parcial, $cantidad_neta)
+{
+    // Retornar el porcentaje.
+	return ($cantidad_parcial *100 ) / $cantidad_neta;
 }
 
 

@@ -11,6 +11,7 @@ define("ROUTE_SERVER_HOST", 'http://localhost/xyz.mazalsoftllc.inventario/');
 // ARQUITECTURA DEL CLIENTE - RUTA HACÍA LA PLANTA.
 // -----------------------------------------------------------------------
 define("RUTA_PLANTA", 'http://localhost/xyz.mazalsoftllc.inventario/cliente/planta');
+define("RUTA_PLANTA_DECORACION", 'http://localhost/xyz.mazalsoftllc.inventario/cliente/planta/decoracion/');
 
 // -----------------------------------------------------------------------
 // ARQUITECTURA DEL SERVIDOR - RUTA HACÍA LOS CONTROLADORES.

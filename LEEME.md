@@ -33,8 +33,6 @@ Arquitectura servidor (servidor/procesador/controladores/):
 - Esto es el controlador multimedia (multimedia.php)
 - Esto es el controlador sesion (sesion.php)
 - Esto es el controlador sql (sql.php)
-- Esto es el controlador rutas (rutas.php)
-
 
 ##### Autenticación
 Arquitectura servidor (servidor/procesador/autenticacion/):
@@ -150,7 +148,17 @@ Mazalsoft Inventario es de código abierto.
 - [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
 - [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
 - [Whatsapp](https://wa.link/125i7q) - +57 3153774638
-- [Sitio web](https://www.mazalsoft.xyz/inventario) - Mazalsoft Inventario
+- [Sitio web](https://www.mazalsoft.xyz) - mazalsoft.
+- [Github](https://github.com/mazalsoft) - Perfil desarrollador en GitHub.
+- [Youtube](https://www.youtube.com/@mazalsoftllc) - Perfil en Youtube
+- [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
+- [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
+
+## Development
+- [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
+- [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
+- [Whatsapp](https://wa.link/125i7q) - +57 3153774638
+- [Sitio web](https://www.mazalsoft.xyz) - mazalsoft.
 - [Github](https://github.com/mazalsoft) - Perfil desarrollador en GitHub.
 - [Youtube](https://www.youtube.com/@mazalsoftllc) - Perfil en Youtube
 - [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
@@ -159,14 +167,55 @@ Mazalsoft Inventario es de código abierto.
 _____________________
 
 ## Algoritmo de instalación estándar.
-1. Establecer la ruta url raíz del servidor web en la constante global del cargador.js
-2. Establecer la ruta url raíz del servidor web en el archivo de cargador.php 
-3. Establecer la configuración de conexión con el servidor de base de datos en el archivo configuracion.php
-4. Importar el script.sql para crear la estructura de tablas de la base de datos del sistema de inventario.
+
+Algoritmo:
+
+INICIO
+
+1. Ingresar a la carpeta de recursos y descargar el código fuente [xyz.mazalsoftllc.inventario-master .zip]
+
+2. Copiar la carpeta [xyz.mazalsoftllc.inventario-master.zip] en el directorio público de XAMPP.
+
+3. Descomprimir la carpeta [xyz.mazalsoftllc.inventario-master] en el directorio público de XAMPP.
+
+4. Renombrar la carpeta [xyz.mazalsoftllc.inventario-master] con el nuevo nombre [nuevo_nombre_proyecto].
+
+5. Acceder a la carpeta servidor/procesador/controladores/
+
+6. Editar el archivo cargador.php
+
+7. Encontrar la línea #8 y reemplazar el valor de la constante ROUTE_SERVER_HOST por la ruta raíz del proyecto 'http://localhost/nuevo_nombre_proyecto/' ¡No olvidar el / al final del nombre del proyecto(barra inclinada).
+
+8. Acceder a la carpeta herrameientas/ia/js/
+
+9. Editar el archivo cargador.js
+
+10. Encontrar la línea #8 y reemplazar el valor de la constante ROUTE_SERVER_HOST por la ruta raíz del proyecto 'http://localhost/nuevo_nombre_proyecto/' ¡No olvidar el / al final del nombre del proyecto(barra inclinada.
+
+11. Abrir el administrador de la base de datos a través de XAMPP.
+
+12. Crear una nueva base de datos y recordar el nombre.
+
+13. Acceder a la carpeta base-de-datos/importacion.
+
+14. Importar el archivo [script_importacion.sql] desde el administrador de base de datos y con la base de datos recién creada.
+
+15. Acceder a la carpeta servidor/procesador/controladores/
+
+16. Editar el archivo configuracion.php
+
+17. Suministrar los datos de acceso a la base de datos: [DB_HOST: "Localhost"], [DB_USER: "root"], [DB_PASS, : ""], [DB_NAME: "nombre_base_de_datos"]
+
+18. Ingresar a [localhost/nombre_proyecto] a través del navegador web.
+
+19. Mazalsoft Inventario debe cargar con estilo y sin inconvenientes.
+
+20. nombre de usuario: admin | contraseña: admin
+
+FIN
 
 ## Instalación en un servidor web local.
- - [Instructivo de instalación](https://youtu.be/16Pi7Rgvi34) - Ver video en Youtube
-
+ - [Instructivo de instalación](https://www.youtube.com/watch?v=EmZcu8L0hfQ&feature=youtu.be) - Ver video en Youtube
 
 ## License
 

@@ -17,208 +17,209 @@
  $c_user          = count_by_id('users');
  $products_sold   = find_higest_saleing_product('10');
  $recent_products = find_recent_product_added('5');
- $recent_sales    = find_recent_sale_added('5')
-?>
-<?php
- // Incluir el encabezado.
- include_once('../../../../cliente/planta/encabezado.php'); ?>
+ $recent_sales    = find_recent_sale_added('5');
+ $accumulator_products_sold = 0;
+ $accumulator_latest_sales = 0;
 
+?> 
 
-<!-- Mensaje de la sesión. -->
-<div class="row">
-   <div class="col-md-6">
-     <?php
-     // Mensaje de la sesión.
-	 echo display_msg($msg); ?>
-   </div>
-</div>
+<?php 
+// Incluir el encabezado.
+include_once('../../../../cliente/planta/decoracion/encabezado.php')?>
 
-  <!-- Sección del Noticiero: Total de usuarios. -->
-  <div class="row">
-    <div class="col-md-3">
-       <div class="panel panel-box clearfix">
-         <div class="panel-icon pull-left bg-green">
-          <i class="glyphicon glyphicon-user"></i>
-        </div>
-        <div class="panel-value pull-right">
-          <h2 class="margin-top"> <?php  echo $c_user['total']; ?> </h2>
-          <p class="text-muted">Usuarios</p>
-        </div>
-       </div>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Noticiero contable</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        class="fas fa-download fa-sm text-white-50"></i> Generar reporte</a>
     </div>
 	
-    <!-- Sección del Noticiero: Total de categorías. -->
-    <div class="col-md-3">
-       <div class="panel panel-box clearfix">
-         <div class="panel-icon pull-left bg-red">
-          <i class="glyphicon glyphicon-list"></i>
-        </div>
-        <div class="panel-value pull-right">
-          <h2 class="margin-top"> <?php  echo $c_categorie['total']; ?> </h2>
-          <p class="text-muted">Categorías</p>
-        </div>
-       </div>
-    </div>
 	
-    <!-- Sección del Noticiero: Total de productos. -->
+	 <!-- Content Row : Complemento para mostrar contadores. -->
+                    <div class="row">
 
-    <div class="col-md-3">
-       <div class="panel panel-box clearfix">
-         <div class="panel-icon pull-left bg-blue">
-          <i class="glyphicon glyphicon-shopping-cart"></i>
-        </div>
-        <div class="panel-value pull-right">
-          <h2 class="margin-top"> <?php  echo $c_product['total']; ?> </h2>
-          <p class="text-muted">Productos</p>
-        </div>
-       </div>
-    </div>
+                        <!-- Contador de usuarios -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Nº de usuarios</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php  echo $c_user['total']; ?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contador de categorías -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Nº de Categorías</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php  echo $c_categorie['total']; ?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-th-list  fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contador de productos -->
+						<div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Nº de Productos</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <?php  echo $c_product['total']; ?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-gift fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <!-- Contador de ventas -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                             Nº de ventas  </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php  echo $c_sale['total']; ?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-shopping-cart fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					 <!-- Content Row: Complemento para mostrar el top de los productos mas vendidos.. -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Productos más vendidos -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Top #10 Productos más vendidos - C.V.(cantidad venta)</h6>
+                                </div>
+                                <div class="card-body">
+								
+								    <!-- Acumular la cantidad total de los productos más vendidos dentro de este contexto. -->								    
+								    <?php foreach ($products_sold as  $product_sold): 
+										
+										    $accumulator_products_sold += $product_sold['totalQty'];
+										
+									      endforeach; ?>  
+
+                                    
+								    <!-- Productos más vendidos -->								    
+								    <?php foreach ($products_sold as  $product_sold): 
+									
+									      // Calculos aritmeticos previos.
+										  // Utilizar la función que permite obtener el porcentaje.
+										  $porcentaje = calcularPorcentaje($product_sold['totalQty'], $accumulator_products_sold);
+									
+									?>
+																				
+										<h4 class="small font-weight-bold">#<?php echo count_id();?> <?php echo remove_junk(first_character($product_sold['name'])); ?><span
+                                            class="float-right">C.V. (<?php echo remove_junk(first_character($product_sold['totalQty'])).") es el ";?><?php echo round($porcentaje,2); ?>%</span></h4>
+                                        <div class="progress mb-4">
+											<div class="progress-bar" role="progressbar" style="width: <?php echo $porcentaje; ?>%"
+												aria-valuenow="<?php echo $porcentaje; ?>" aria-valuemin="0" aria-valuemax="<?php echo $accumulator_products_sold; ?>"></div>
+										</div>
+									<?php endforeach; ?>     
+                                    
+                                    
+                                    
+                                    
+                                </div>
+
+                            
+
+                            </div> <!-- Fin de los productos más vendidos. -->										
+                        </div>
+						
+						 <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Últimas ventas realizadas -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Top #5 Ventas más recientes - I.B.(ingreso bruto)</h6>
+                                </div>
+                                <div class="card-body">
+								
+								    <!-- Acumular la cantidad total de las últimas ventas dentro de este contexto. -->								    
+								    <?php foreach ($recent_sales as  $recent_sale): 
+										
+										     $accumulator_latest_sales += $recent_sale['price'];
+										
+									      endforeach; ?>  
+
+                                    
+								    <!-- Productos más vendidos -->								    
+								    <?php foreach ($recent_sales as  $recent_sale): 
+									
+									      // Calculos aritmeticos previos.
+										  // Utilizar la función que permite obtener el porcentaje.
+										  $porcentaje = calcularPorcentaje($recent_sale['price'], $accumulator_latest_sales);										  				      										  
+									
+									?>
+																				
+										<h4 class="small font-weight-bold">#<?php echo count_id();?> <?php echo remove_junk(first_character($recent_sale['name'])); ?><span
+                                            class="float-right">I.B. $<?php echo remove_junk(first_character($recent_sale['price']))." es el ".round($porcentaje,2); ?>%</span></h4>
+                                        <div class="progress mb-4">
+											<div class="progress-bar bg-success" role="progressbar" style="width: <?php echo $porcentaje; ?>%"
+												aria-valuenow="<?php echo $porcentaje; ?>" aria-valuemin="0" aria-valuemax="<?php echo $accumulator_latest_sales; ?>"></div>
+										</div>
+									<?php endforeach; ?>     
+                                    
+                                    
+                                    
+                                    
+                                </div>
+
+                            
+
+                            </div> <!-- Fin de las últimas ventas. -->										
+                        </div>
+						
+						
+
+
+                        
+                    </div>
+					
+					
+					
+					
 	
-    <!-- Sección del Noticiero: Total de ventas. -->
 
-    <div class="col-md-3">
-       <div class="panel panel-box clearfix">
-         <div class="panel-icon pull-left bg-yellow">
-          <i class="glyphicon glyphicon-usd"></i>
-        </div>
-        <div class="panel-value pull-right">
-          <h2 class="margin-top"> <?php  echo $c_sale['total']; ?></h2>
-          <p class="text-muted">Ventas</p>
-        </div>
-       </div>
-    </div>
 </div>
-
-  <!-- Sección del Noticiero: Frase de gancho. -->
-
-  <div class="row">
-   <div class="col-md-12">
-      <div class="panel">
-        <div class="jumbotron text-center">
-           <h1>Gracias por usar esta tecnología digital.</h1>
-           <p> <strong>Mazalsoft inventario v1.0.0</strong> es su mano amiga en los negocios.<strong> Gestión de inventario. </strong>
-           </br> <a href="https://www.mazalsoft.xyz/inventario/" title="Mazalsoft Inventario" target="_blank">Visita la página web del proyecto</a></p>
-
-        </div>
-      </div>
-   </div>
-  </div>
-
-  <!-- Sección del Noticiero: Productos más vendidos. -->
-  <div class="row">
-   <div class="col-md-4">
-     <div class="panel panel-default">
-       <div class="panel-heading">
-         <strong>
-           <span class="glyphicon glyphicon-th"></span>
-           <span>Productos más vendidos</span>
-         </strong>
-       </div>
-       <div class="panel-body">
-         <table class="table table-striped table-bordered table-condensed">
-          <thead>
-           <tr>
-             <th>Título</th>
-             <th>Total vendido</th>
-             <th>Total cantidad</th>
-           <tr>
-          </thead>
-          <tbody>
-            <?php foreach ($products_sold as  $product_sold): ?>
-              <tr>
-                <td><?php echo remove_junk(first_character($product_sold['name'])); ?></td>
-                <td><?php echo (int)$product_sold['totalSold']; ?></td>
-                <td><?php echo (int)$product_sold['totalQty']; ?></td>
-              </tr>
-            <?php endforeach; ?>
-          <tbody>
-         </table>
-       </div>
-     </div>
-   </div>
-   
-   <!-- Sección del Noticiero: Productos más vendidos. -->
-   <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <strong>
-            <span class="glyphicon glyphicon-th"></span>
-            <span>ÚLTIMAS VENTAS</span>
-          </strong>
-        </div>
-        <div class="panel-body">
-          <table class="table table-striped table-bordered table-condensed">
-       <thead>
-         <tr>
-           <th class="text-center" style="width: 50px;">#</th>
-           <th>Nombre del producto</th>
-           <th>Dato</th>
-           <th>Total Ventas</th>
-         </tr>
-       </thead>
-       <tbody>
-         <?php foreach ($recent_sales as  $recent_sale): ?>
-         <tr>
-           <td class="text-center"><?php echo count_id();?></td>
-           <td>
-            <a href="edit_sale.php?id=<?php echo (int)$recent_sale['id']; ?>">
-             <?php echo remove_junk(first_character($recent_sale['name'])); ?>
-           </a>
-           </td>
-           <td><?php echo remove_junk(ucfirst($recent_sale['date'])); ?></td>
-           <td>$<?php echo remove_junk(first_character($recent_sale['price'])); ?></td>
-        </tr>
-
-       <?php endforeach; ?>
-       </tbody>
-     </table>
-    </div>
-   </div>
-  </div>
-  
-  <!-- Sección del Noticiero: Productos añadidos recientemente. -->
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <strong>
-          <span class="glyphicon glyphicon-th"></span>
-          <span>Productos añadidos recientemente</span>
-        </strong>
-      </div>
-      <div class="panel-body">
-
-       <!-- Sección del Noticiero: Informacón básica del producto. -->
-
-        <div class="list-group">
-      <?php foreach ($recent_products as  $recent_product): ?>
-            <a class="list-group-item clearfix" href="<?php echo ROUTE_SERVER_HOST;?>servidor/procesador/api/editar_registro/editar_producto.php?id=<?php echo    (int)$recent_product['id'];?>">
-                <h4 class="list-group-item-heading">
-                 <?php if($recent_product['media_id'] === '0'): ?>
-                    <img class="img-avatar img-circle" src="<?php echo ROUTE_SERVER_HOST;?>servidor/memoria/persistente/almacenamiento-producto/imagenes/no_image.jpg" alt="">
-                  <?php else: ?>
-                  <img class="img-avatar img-circle" src="<?php echo ROUTE_SERVER_HOST;?>servidor/memoria/persistente/almacenamiento-producto/imagenes/<?php echo $recent_product['image'];?>" alt="" />
-                <?php endif;?>
-                <?php echo remove_junk(first_character($recent_product['name']));?>
-                  <span class="label label-warning pull-right">
-                 $<?php echo (int)$recent_product['sale_price']; ?>
-                  </span>
-                </h4>
-                <span class="list-group-item-text pull-right">
-                <?php echo remove_junk(first_character($recent_product['categorie'])); ?>
-              </span>
-          </a>
-      <?php endforeach; ?>
-    </div>
-  </div>
- </div>
-</div>
- </div>
-  <div class="row">
-
-  </div>
-
-
-
-<?php
- // Incluir el encabezado.
- include_once('../../../../cliente/planta/pie_pagina.php'); ?>
+<!-- /.container-fluid -->
+<?php 
+// Incluir el pie de página.
+include_once('../../../../cliente/planta/decoracion/pie_pagina.php'); ?>

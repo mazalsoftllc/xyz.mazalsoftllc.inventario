@@ -187,21 +187,51 @@ function tableExists($table){
      global $session;
      $current_user = current_user();
      $login_level = find_by_groupLevel($current_user['user_level']);
-     //if user not login
-     if (!$session->isUserLoggedIn(true)):
+	 
+	 // Comprobar si existe el array.
+	 
+	 if(is_array($login_level)){ // Es un array
+		 
+		 //if user not login
+        if (!$session->isUserLoggedIn(true)):
             $session->msg('d','Please login...');
-            redirect('index.php', false);
-      //if Group status Deactive
-     elseif($login_level['group_status'] === '0'):
+            redirect(ROUTE_SERVER_HOST.'index.php', false);
+        //if Group status Deactive
+        elseif($login_level['group_status'] === '0'):
            $session->msg('d','This level user has been band!');
-           redirect('home.php',false);
-      //cheackin log in User level and Require level is Less than or equal to
-     elseif($current_user['user_level'] <= (int)$require_level):
+           redirect(ROUTE_SERVER_HOST.'index.php',false);
+        //cheackin log in User level and Require level is Less than or equal to
+        elseif($current_user['user_level'] <= (int)$require_level):
               return true;
-      else:
+        else:
             $session->msg("d", "Sorry! you dont have permission to view the page.");
-            redirect('home.php', false);
+            redirect(ROUTE_SERVER_HOST.'index.php', false);
         endif;
+		 
+		 
+	 } else {
+		 
+		 $login_level = -1; // Nivel de usuario desconocido.
+		 
+		  //if user not login
+        if (!$session->isUserLoggedIn(true)):
+            $session->msg('d','Please login...');
+            redirect(ROUTE_SERVER_HOST.'index.php', false);
+        //if Group status Deactive
+        elseif($login_level === '0'):
+           $session->msg('d','This level user has been band!');
+           redirect(ROUTE_SERVER_HOST.'index.php',false);
+        //cheackin log in User level and Require level is Less than or equal to
+        elseif($current_user['user_level'] <= (int)$require_level):
+              return true;
+        else:
+            $session->msg("d", "Sorry! you dont have permission to view the page.");
+            redirect(ROUTE_SERVER_HOST.'index.php', false);
+        endif;
+		 
+	 }
+	 
+     
 
      }
    /*--------------------------------------------------------------*/
