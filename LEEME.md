@@ -22,6 +22,9 @@ Arquitectura cliente (cliente/planta/):
 - Esto es el diseño del menú administrador (menu_admin.php)
 - Esto es el diseño del menú usuario (menu_usuario.php)
 - Esto es el diseño del menú especial (menu_especial.php)
+
+###### Decoracion
+Arquitectura cliente (cliente/planta/decoracion):
 _____________________
 ##### Controladores
 Arquitectura servidor (servidor/procesador/controladores/):
@@ -143,16 +146,6 @@ Mazalsoft Inventario utiliza una serie de proyectos de código abierto para func
 - [CSS](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics) - V. Última versión para el 25-11-2022
 
 Mazalsoft Inventario es de código abierto.
-
-## Development
-- [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
-- [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
-- [Whatsapp](https://wa.link/125i7q) - +57 3153774638
-- [Sitio web](https://www.mazalsoft.xyz) - mazalsoft.
-- [Github](https://github.com/mazalsoft) - Perfil desarrollador en GitHub.
-- [Youtube](https://www.youtube.com/@mazalsoftllc) - Perfil en Youtube
-- [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
-- [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
 
 ## Development
 - [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
