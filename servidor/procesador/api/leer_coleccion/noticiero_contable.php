@@ -208,7 +208,89 @@ include_once('../../../../cliente/planta/decoracion/encabezado.php')?>
                         </div>
 						
 						
+						 <div class="col-lg-6 mb-4">
 
+                            <!-- Asistente de Marketing Digital - Preentación de Pinky. -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo pinkyDiceHola($user['name']) ?></h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="<?php echo pinkyMuestraLogo()?>" alt="...">
+                                    </div>
+                                    <p><?php echo pinkyMuestraDescripcion() ?></p>
+                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Explora todas mis habilidades &rarr;</a>
+                                </div>
+                            </div>		                           
+
+                        </div>
+						
+						<div class="col-lg-6 mb-4">
+
+                            <!-- Asistente de Marketing Digital - Productos candidatos al plan de Marketing Digital. -->
+							<?php $pinky_productos_candidatos =  pinkyProductosCandidatosMD(10) ?>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $pinky_productos_candidatos['titulo']; ?></h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="<?php echo $pinky_productos_candidatos['imagen'] ?>" alt="...">
+                                    </div>
+                                    <p><?php echo $pinky_productos_candidatos['descripcion'] ?></p>
+                                    <a target="_blank" rel="nofollow" href="#">Explora los productos candidatos &rarr;</a>
+							
+                                </div>
+                            </div>		                           
+
+                        </div>
+						
+						<div class="col-lg-6 mb-4">
+
+                            <!-- Asistente de Marketing Digital - Presupuesto inteligente. -->
+							<?php $pinky_presupuesto_inteligente =  pinkyPresupuestoMD(10,10) ?>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $pinky_presupuesto_inteligente['titulo']; ?></h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="<?php echo $pinky_presupuesto_inteligente['imagen'] ?>" alt="...">
+                                    </div>
+                                    <p><?php echo $pinky_presupuesto_inteligente['descripcion'] ?></p>
+                                    <a target="_blank" rel="nofollow" href="#">Explora el desglose del presupuesto &rarr;</a>
+							
+                                </div>
+                            </div>		                           
+
+                        </div>
+						
+						<div class="col-lg-6 mb-4">
+
+                            <!-- Asistente de Marketing Digital -  Periodismo digital de los nuevos productos. -->
+							<?php $pinky_periodismo_digital =  pinkyPeriodismoDigital(10) ?>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $pinky_periodismo_digital['titulo']; ?></h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="<?php echo $pinky_periodismo_digital['imagen'] ?>" alt="...">
+                                    </div>
+                                    <p><?php echo $pinky_periodismo_digital['descripcion'] ?></p>
+                                    <a target="_blank" rel="nofollow" href="#">Explora el plan de periodismo digital &rarr;</a>
+							
+                                </div>
+                            </div>		                           
+
+                        </div>
+						
+						
 
                         
                     </div>

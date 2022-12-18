@@ -23,4 +23,6 @@ require_once(LIB_PATH_INC.'sesion.php');
 require_once(LIB_PATH_INC.'multimedia.php');
 require_once(LIB_PATH_INC.'almacen_datos.php');
 require_once(LIB_PATH_INC.'sql.php');
+require_once(LIB_PATH_INC.'pinky_v1.php');
+
 ?>

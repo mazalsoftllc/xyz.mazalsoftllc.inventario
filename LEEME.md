@@ -22,9 +22,6 @@ Arquitectura cliente (cliente/planta/):
 - Esto es el diseño del menú administrador (menu_admin.php)
 - Esto es el diseño del menú usuario (menu_usuario.php)
 - Esto es el diseño del menú especial (menu_especial.php)
-
-###### Decoracion
-Arquitectura cliente (cliente/planta/decoracion):
 _____________________
 ##### Controladores
 Arquitectura servidor (servidor/procesador/controladores/):
@@ -36,6 +33,7 @@ Arquitectura servidor (servidor/procesador/controladores/):
 - Esto es el controlador multimedia (multimedia.php)
 - Esto es el controlador sesion (sesion.php)
 - Esto es el controlador sql (sql.php)
+- Esto es el controlador de Pinky v1.0.0 (pinky_v1.php)
 
 ##### Autenticación
 Arquitectura servidor (servidor/procesador/autenticacion/):
@@ -157,8 +155,22 @@ Mazalsoft Inventario es de código abierto.
 - [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
 - [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
 
-_____________________
+## Development
+- [Mazalsoft](https://mazalsoft.xyz) - @mazalsoftllc
+- [Mauricio Chara Hurtado](https://www.linkedin.com/in/mazalsoft) - @mauriciocharaoficial
+- [Whatsapp](https://wa.link/125i7q) - +57 3153774638
+- [Sitio web](https://www.mazalsoft.xyz) - mazalsoft.
+- [Github](https://github.com/mazalsoft) - Perfil desarrollador en GitHub.
+- [Youtube](https://www.youtube.com/@mazalsoftllc) - Perfil en Youtube
+- [Linkedin](https://www.linkedin.com/in/mazalsoft) - Perfil en Linkedin
+- [Twitter](https://www.twitter.com/mazalsoftllc) - Perfil en Twitter
 
+_____________________
+## Características nuevas
+
+- Pinky es la mascota virtual de Mazalsoft Inventario, un asistente de Marketing Digital. La casa de Pinky es Mazalsoft Inventario y tiene habilidades sorprendentes para hacer crecer tu empresa.
+
+_____________________
 ## Algoritmo de instalación estándar.
 
 Algoritmo:
