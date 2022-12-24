@@ -205,7 +205,7 @@ function pinkyPresupuestoMD($limite, $porcentaje){
 /*------------------------------------------------ --------------*/
 function pinkyPeriodismoDigital($limite){
 	
-    // Buscar los productos más vendidos.
+    // Buscar los productos nuevos.
 	$productos_recientes = find_recent_product_added((string)$limite);
 	$acumulador_productos_recientes = 0;
 	

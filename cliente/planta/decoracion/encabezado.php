@@ -245,7 +245,7 @@
                                     Configuración
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fa fa-pencil-square-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                    Registro de actividades
                                 </a>
                                 <div class="dropdown-divider"></div>

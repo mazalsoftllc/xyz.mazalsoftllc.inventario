@@ -5,6 +5,8 @@
   // Comprobar el nivel de acceso
    page_require_level(1);
 ?>
+
+
 <?php
 
   // Controlar la acción de agregar un grupo.
@@ -45,34 +47,73 @@
    }
  }
 ?>
-<?php 
-  //Estructura DOM para agreagr un nuevo grupo.
- include_once('../../../../cliente/planta/encabezado.php'); ?>
-<div class="login-page">
-    <div class="text-center">
-       <h3>Agregar nuevo grupo de usuario</h3>
-     </div>
-     <?php echo display_msg($msg); ?>
-      <form method="post" action="nuevo_grupo.php" class="clearfix">
-        <div class="form-group">
-              <label for="name" class="control-label">Nombre del grupo</label>
-              <input type="name" class="form-control" name="group-name">
-        </div>
-        <div class="form-group">
-              <label for="level" class="control-label">Nivel del grupo</label>
-              <input type="number" class="form-control" name="group-level">
-        </div>
-        <div class="form-group">
-          <label for="status">Estado</label>
-            <select class="form-control" name="status">
-              <option value="1">Activo</option>
-              <option value="0">Desactivado</option>
-            </select>
-        </div>
-        <div class="form-group clearfix">
-                <button type="submit" name="add" class="btn btn-info">Crear grupo</button>
-        </div>
-    </form>
-</div>
 
-<?php include_once('../../../../cliente/planta/pie_pagina.php'); ?>
+
+<?php 
+ // Incluir el encabezado.
+include_once('../../../../cliente/planta/decoracion/encabezado.php')?>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <!-- Mostrar el mensaje actual de la sesión. -->
+	    <h1 class="h3 mb-0 text-gray-800">Nuevo Grupo</h1>
+        <a href="../leer_coleccion/grupos.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        class="fas fa-list fa-sm text-white-50"></i> Lista de grupos</a>
+    </div>
+	
+	
+	 <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-edit-group"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">  
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4"><?php echo display_msg($msg); ?></h1>
+                            </div>
+                            <form method="post" action="nuevo_grupo.php" class="user">
+                                 <div class="form-group">
+									<label for="name" class="control-label">Nombre del grupo</label>
+                                    <input type="name" class="form-control form-control-user" name="group-name">
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="level" class="control-label">Nivel del grupo</label>
+                                     <input type="number" class="form-control form-control-user" name="group-level">
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="status">Estado</label>
+                                     <select class="form-control" name="status">
+                                        <option value="1">Activo</option>
+                                        <option value="0">Desactivado</option>
+                                      </select>
+                                 </div>
+                                 <div class="form-group clearfix">
+                                       <button type="submit" name="add" class="btn btn-primary btn-user btn-block">Crear grupo</button>
+                                 </div>
+                            </form>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="../leer_coleccion/grupos.php">Listar grupos</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+					
+					
+	
+
+</div>
+<!-- /.container-fluid -->
+
+
+
+<?php 
+// Incluir el pie de página.
+
+include_once('../../../../cliente/planta/decoracion/pie_pagina.php'); ?>

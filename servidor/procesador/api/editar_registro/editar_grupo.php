@@ -52,38 +52,78 @@
 
 
 <?php 
-
 // Incluir el encabezado.
-include_once('../../../../cliente/planta/encabezado.php'); ?>
+include_once('../../../../cliente/planta/decoracion/encabezado.php')?>
 
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <!-- Mostrar el mensaje actual de la sesión. -->
+	    <?php echo display_msg($msg); ?>
+		<h1 class="h3 mb-0 text-gray-800">Editar Grupo</h1>
+        <a href="../crear_registro/nuevo_grupo.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        class="fas fa-plus fa-sm text-white-50"></i> Nuevo grupo</a>
+    </div>
+	
+	
+	 <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-edit-group"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4"><?php echo display_msg($msg); ?></h1>
+                            </div>
+                            <form method="post" action="editar_grupo.php?id=<?php echo (int)$e_group['id'];?>" class="user">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+									    <label for="name" class="control-label">Nombre del grupo</label>
+                                        <input type="text" class="form-control form-control-user" id="group-name" name="group-name"
+                                            placeholder="Nombre del grupo" value = "<?php echo remove_junk(ucwords($e_group['group_name'])); ?>">
+                                    </div>
+                                    <div class="col-sm-6">
+									    <label for="level" class="control-label">Nivel del grupo</label>
+                                        <input type="number" class="form-control form-control-user" id="group-level" name="group-level"
+                                            placeholder="Nivel del grupo" value="<?php echo (int)$e_group['group_level']; ?>">
+                                    </div>
+                                </div>
+                               <div class="form-group">
+									<label for="status">Estado</label>
+									<select class="form-control" name="status">
+										<option <?php if($e_group['group_status'] === '1') echo 'selected="selected"';?> value="1"> Activo </option>
+										<option <?php if($e_group['group_status'] === '0') echo 'selected="selected"';?> value="0">Desactivado</option>
+									</select>
+								</div>
+                                
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                    Actualizar
+                                </button>
+                                <hr>
+                                
+                            </form>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="../leer_coleccion/grupos.php">Listar grupos</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+					
+					
+	
 
-<div class="login-page">
-    <div class="text-center">
-       <h3>Editar grupo</h3>
-     </div>
-     <?php echo display_msg($msg); ?>
-      <form method="post" action="editar_grupo.php?id=<?php echo (int)$e_group['id'];?>" class="clearfix">
-        <div class="form-group">
-              <label for="name" class="control-label">Nombre del grupo</label>
-              <input type="name" class="form-control" name="group-name" value="<?php echo remove_junk(ucwords($e_group['group_name'])); ?>">
-        </div>
-        <div class="form-group">
-              <label for="level" class="control-label">Nivel del grupo</label>
-              <input type="number" class="form-control" name="group-level" value="<?php echo (int)$e_group['group_level']; ?>">
-        </div>
-        <div class="form-group">
-          <label for="status">Status</label>
-              <select class="form-control" name="status">
-                <option <?php if($e_group['group_status'] === '1') echo 'selected="selected"';?> value="1"> Activo </option>
-                <option <?php if($e_group['group_status'] === '0') echo 'selected="selected"';?> value="0">Desactivado</option>
-              </select>
-        </div>
-        <div class="form-group clearfix">
-                <button type="submit" name="update" class="btn btn-info">Actualizar</button>
-        </div>
-    </form>
 </div>
+<!-- /.container-fluid -->
+
+
 
 <?php 
-// Incluir el pie de páina. 
-include_once('../../../../cliente/planta/pie_pagina.php'); ?>
+// Incluir el pie de página.
+
+include_once('../../../../cliente/planta/decoracion/pie_pagina.php'); ?>

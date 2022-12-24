@@ -305,3 +305,4 @@ include_once('../../../../cliente/planta/decoracion/encabezado.php')?>
 <?php 
 // Incluir el pie de página.
 include_once('../../../../cliente/planta/decoracion/pie_pagina.php'); ?>
+
